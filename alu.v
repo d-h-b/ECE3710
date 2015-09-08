@@ -315,12 +315,12 @@ module alu_FSM( A, B, OpCode, CLK, RESET);
 			begin
 			if(counter == 32'b10001111000011010001100000000)
 				begin
-					currentOp = currentOp + 1'd1;
-					counter = 32'b0;
+					currentOp <= currentOp + 1'd1;
+					counter <= 32'b0;
 				end
 			else 
 				begin
-					counter = counter+ 1'b1;
+					counter <= counter+ 1'b1;
 				end
 			end
 		end
